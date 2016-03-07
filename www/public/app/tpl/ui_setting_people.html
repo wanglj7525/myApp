@@ -1,0 +1,178 @@
+<!--<div ng-controller="SetPeopleCtrl">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading" style="position: relative">人员管理-->
+<!--<button type="submit" class="btn btn-add btn-href" style="width: 150px;" >添加</button>-->
+<!--</div>-->
+<!--<table st-table="peoplelist"  class="table table-bordered">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th st-sort="name">姓名</th>-->
+<!--<th st-sort="company">职务</th>-->
+<!--<th st-sort="sex">性别</th>-->
+<!--<th st-sort="nation">民族</th>-->
+<!--<th st-sort="birthday">出生</th>-->
+<!--<th st-sort="place">籍贯</th>-->
+<!--<th st-sort="troops">入伍</th>-->
+<!--<th st-sort="party">入党</th>-->
+<!--<th st-sort="education">学历</th>-->
+<!--<th st-sort="school">学校</th>-->
+<!--<th>操作</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr ng-repeat="row in peoplelist" >-->
+<!--<td>{{row.name}}</td>-->
+<!--<td>{{row.company}}</td>-->
+<!--<td>{{row.sex}}</td>-->
+<!--<td>{{row.nation}}</td>-->
+<!--<td>{{row.birthday}}</td>-->
+<!--<td>{{row.palce}}</td>-->
+<!--<td>{{row.troops}}</td>-->
+<!--<td>{{row.party}}</td>-->
+<!--<td>{{row.education}}</td>-->
+<!--<td>{{row.school}}</td>-->
+<!--<td>-->
+<!--<button type="button"  class="btn btn-href ">-->
+<!--修改-->
+<!--</button>-->
+<!--<button type="button"  class="btn btn-href ">-->
+<!--删除-->
+<!--</button>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--<tfoot>-->
+<!--<tr>-->
+<!--<td colspan="11" class="text-center">-->
+<!--<div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7" class="no-margin"></div>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tfoot>-->
+<!--</table>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div ng-controller="testController as mc" class="table-container ng-scope">-->
+<!--<table class="table" st-pipe="mc.callServer" st-table="mc.displayed">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th st-sort="id">id</th>-->
+<!--<th st-sort="name">name</th>-->
+<!--<th st-sort="age">age</th>-->
+<!--<th st-sort="saved">saved people</th>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<th><input st-search="id"/></th>-->
+<!--<th><input st-search="name"/></th>-->
+<!--<th><input st-search="age"/></th>-->
+<!--<th><input st-search="saved"/></th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody ng-show="!mc.isLoading">-->
+<!--<tr ng-repeat="row in mc.displayed">-->
+<!--<td>{{row.id}}</td>-->
+<!--<td>{{row.name}}</td>-->
+<!--<td>{{row.age}}</td>-->
+<!--<td>{{row.saved}}</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--<tbody ng-show="mc.isLoading">-->
+<!--<tr>-->
+<!--<td colspan="4" class="text-center">Loading ... </td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--<tfoot>-->
+<!--<tr>-->
+<!--<td class="text-center" st-pagination="" st-items-by-page="10" colspan="4">-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tfoot>-->
+<!--</table>-->
+<!--</div>-->
+
+<div>
+     <div  ng-controller="SetPeopleCtrl as vm" >
+          <script type="text/ng-template" id="saveAddPeopleModel.html">
+               <div ng-include="'/public/app/tpl/ui_peopleadd_modal.html'"></div>
+          </script>
+          <script type="text/ng-template" id="saveUpdatePeopleModel.html">
+               <div ng-include="'/public/app/tpl/ui_peopleupdate_model.html'"></div>
+          </script>
+          <div class="panel panel-default">
+               <div class="panel-heading" style="position: relative">
+                    <h4 class="col-md-9">人员管理</h4>
+                    <div class="input-group col-md-2">
+                         <span class="input-group-addon">搜索</span>
+                         <input type="search" name="filter" class="form-control input-sm pull-right " ng-model="vm.dataTable.filter" ng-change="vm.dataTable.resetPaging()">
+                    </div>
+                    <button ng-click="addpeople()" class="btn btn-add btn-href col-md-1"  >添加</button>
+               </div>
+               <div class="row form-inline">
+                    <div class="col-xs-6 angular-data-table">
+                         <!--<select name="pageSize" class="form-control input-sm" ng-model="vm.dataTable.pageSize">-->
+                         <!--<option value="10" ng-selected="true">10</option>-->
+                         <!--<option value="25">25</option>-->
+                         <!--<option value="50">50</option>-->
+                         <!--<option value="100">100</option>-->
+                         <!--</select>-->
+                         <!--<label for="pageSize" class="control-label">records per page</label>-->
+                    </div>
+                    <div >
+                         <table class="table table-bordered">
+                              <thead>
+                              <tr>
+                                   <th ng-click="vm.dataTable.sort('name')">姓名</th>
+                                   <th ng-click="vm.dataTable.sort('company')">职务</th>
+                                   <th ng-click="vm.dataTable.sort('sex')">性别</th>
+                                   <th ng-click="vm.dataTable.sort('nation')">民族</th>
+                                   <th ng-click="vm.dataTable.sort('birthday')">出生</th>
+                                   <th ng-click="vm.dataTable.sort('place')">籍贯</th>
+                                   <th ng-click="vm.dataTable.sort('troops')">入伍</th>
+                                   <th ng-click="vm.dataTable.sort('party')">入党</th>
+                                   <th ng-click="vm.dataTable.sort('education1')">学历</th>
+                                   <th ng-click="vm.dataTable.sort('school1')">学校</th>
+                                   <th>操作</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr  ng-repeat="project in vm.dataTable.filteredData = (vm.dataTable.data | filter:vm.dataTable.filter) | orderBy:vm.dataTable.sortColumn:vm.dataTable.sortDescending | startFrom:vm.dataTable.currentPageStart() | limitTo:vm.dataTable.pageSize">
+                                   <td>{{project.name}}</td>
+                                   <td>{{project.company}}</td>
+                                   <td>{{project.sex}}</td>
+                                   <td>{{project.nation}}</td>
+                                   <td>{{project.birthday}}</td>
+                                   <td>{{project.palce}}</td>
+                                   <td>{{project.troops}}</td>
+                                   <td>{{project.party}}</td>
+                                   <td>{{project.education1}}</td>
+                                   <td>{{project.school1}}</td>
+                                   <td>
+                                        <button ng-click="updatepeople(project)" type="button"  class="btn btn-href ">
+                                             修改
+                                        </button>
+                                        <button type="button"  class="btn btn-href ">
+                                             删除
+                                        </button>
+                                   </td>
+                              </tr>
+                              </tbody>
+                         </table>
+                    </div>
+                    <!--<div class="col-xs-6">-->
+                    <!--&lt;!&ndash;<p>显示 {{vm.dataTable.currentPageStart()}} 到 {{vm.dataTable.currentPageEnd()}} 共 {{vm.projects.length}} 条数据</p>&ndash;&gt;-->
+                    <!--</div>-->
+                    <div class="col-xs-12">
+                         <div >
+                              <ul class="pagination" style="margin-left: 30%;">
+                                   <li class="prev" ng-class="{ disabled: vm.dataTable.onFirstPage()}"><a href="#" ng-click="vm.dataTable.previous()">上一页</a></li>
+                                   <li ng-repeat-start="page in vm.dataTable.pages()" ng-repeat-end ng-class="{active: vm.dataTable.currentPage === page - 1}">
+                                        <a ng-click="vm.dataTable.goToPage(page)">{{page}}</a>
+                                   </li>
+                                   <li class="next" ng-class="{ disabled: vm.dataTable.onLastPage()}"><a href="#" ng-click="vm.dataTable.next()">下一页</a></li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>

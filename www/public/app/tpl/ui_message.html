@@ -1,0 +1,81 @@
+		<div class="row col-padding" ng-controller="MessageController">
+            <!--<div class="bg-light md-whiteframe-z0 md-aside md-content hidden-xs affix" >-->
+                <!--<nav ui-nav  ng-include="'/public/app/tpl/blocks/material.nav.html'"></nav>-->
+            <!--</div>-->
+			<!-- tab -->
+            <div class="md-right" >
+                <tabset class="tab-container " >
+                    <!-- 默认选中第二个 active="selectTab"-->
+                    <tab heading="按头像查看" class="blue-500">
+                        <div class="row" >
+                            <script type="text/ng-template" id="myModalContent.html">
+                                <div ng-include="'/public/app/tpl/ui_message_modal.html'"></div>
+                            </script>
+                            <div ng-repeat="t in imgs">
+                                <div class="col-sm-2">
+                                    <div class="panel panel-card">
+                                        <div class="item">
+                                            <img ng-click="showOneDetail(t.id)" src="{{t.img}}" class="w-full r-t" alt="Washed Out">
+                                        </div>
+                                        <div class="wrapper">
+                                            <h4>
+                                                {{t.name}}
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </tab>
+                    <tab heading="按花名册查看"  class="blue-500" >
+                        <div class="row">
+                            <table st-table="messagetabletab"  class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th st-sort="name">姓名</th>
+                                    <th st-sort="company">职务</th>
+                                    <th st-sort="sex">性别</th>
+                                    <th st-sort="nation">民族</th>
+                                    <th st-sort="birthday">出生</th>
+                                    <th st-sort="place">籍贯</th>
+                                    <th st-sort="troops">入伍</th>
+                                    <th st-sort="party">入党</th>
+                                    <th st-sort="education">学历</th>
+                                    <th st-sort="school">学校</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="row in messagetabletab" >
+                                    <td>{{row.name}}</td>
+                                    <td>{{row.company}}</td>
+                                    <td>{{row.sex}}</td>
+                                    <td>{{row.nation}}</td>
+                                    <td>{{row.birthday}}</td>
+                                    <td>{{row.palce}}</td>
+                                    <td>{{row.troops}}</td>
+                                    <td>{{row.party}}</td>
+                                    <td>{{row.education}}</td>
+                                    <td>{{row.school}}</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="10" class="text-center">
+                                        <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7" class="no-margin"></div>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </tab>
+
+                </tabset>
+            </div>
+
+		</div>
+		<!--  /tab -->
+	<!--</div>-->
+<!--</div>-->

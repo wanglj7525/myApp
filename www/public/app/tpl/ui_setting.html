@@ -1,0 +1,31 @@
+<!--ng-controller="SettingController"-->
+<div class="row hbox hbox-auto-xs hbox-auto-sm">
+    <div class="bg-light md-whiteframe-z0 md-aside md-content hidden-xs affix" >
+        <ul class="nav nav-pills nav-stacked ">
+            <li ui-sref-active="active">
+                <a ui-sref="app.setting.tree">
+                    单位树维护
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.setting.daima">
+                    代码维护
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.setting.user">
+                    用户管理
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.setting.people">
+                    人员管理
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="md-right">
+            <div ui-view ></div>
+    </div>
+
+</div>

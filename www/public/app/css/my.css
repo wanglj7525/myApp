@@ -1,0 +1,318 @@
+.col-padding{
+    padding: 0px;
+}
+.input_controller {
+    position: absolute;
+
+    top: 0px;
+    cursor: pointer;
+    right: -3px;
+    border-radius: 0px 4px 4px 0px;
+    height: 34px;
+    width: 36px;
+    display: table-cell;
+    text-align: center;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    background-color: #E0E0E0;
+    background-image: linear-gradient(#FFF 0%, #E0E0E0 100%);
+    background-position: 0px -15px;
+    background-repeat: repeat-x;
+}
+
+.btn-padding{
+    padding: 0px;
+}
+.fixtop{
+    position:fixed;
+    top:50px;
+    z-index:1000;
+}
+.analysis{
+    margin-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
+}
+.nav-title{
+    font-size: 18px;
+}
+.left-button{
+    margin:5px;
+}
+/*!*自动搜索*!*/
+/*.autocomplete-suggestions{*/
+    /*border: 1px #ccc solid;*/
+    /*background-color: #ccc;*/
+    /*width: 15%;*/
+    /*margin-right: 40%;*/
+/*}*/
+/*.autocomplete-selected{*/
+    /*background-color: #676767;*/
+    /*color: #fff;*/
+/*}*/
+/*标签定义*/
+.addziduan{margin-left: 3px}
+.addguanxi{margin-right: 3px}
+.addzhi{margin-right: 4px}
+.addluoji{width: 60%;margin-left: 40%;}
+/*管理标签调整*/
+.markerManage{
+    width: 40%;
+    margin-left: 60%;
+    margin-top: 2%;
+    color: #336699!important;
+    background-color: #fff;
+}
+.markerHr{
+    margin-top:2%;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+/*所有表格样式*/
+
+thead{
+    border-bottom: 0px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #676767;
+}
+.lastTd{
+    margin-right: 0px;
+}
+/*左右布局*/
+.leftNav{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: auto;
+}
+/*添加按钮*/
+.btn-add{
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 80%;
+    margin-top: 4px;
+}
+/*班子调配按钮*/
+.btn-href{
+    color: #ffffff !important;
+    background-color: #2E7BC9;
+    border-color: #2E7BC9;
+}
+.btn-href:hover,
+.btn-href:focus,
+.btn-href:active,
+.btn-href.active,
+.open .dropdown-toggle.btn-href {
+    color: #ffffff !important;
+    background-color: #1E7BC9;
+    border-color: #0E7BC9;
+}
+
+/*字体设置*/
+.nav-title{
+    font-family: 微软雅黑;
+    font-size: 110%;
+}
+/*需要调整的问题*/
+.list-group-item{
+    border-left:0px;
+    border-right: 0px;
+}
+/*工作提示右table*/
+.panel {
+    border-color: #FFFFFF;
+}
+table{
+    border-collapse:collapse;
+    border:0px solid #999;
+    font-size:14px;
+}
+
+
+
+/*导航栏样式*/
+
+.nav-pills > li.active > a {
+    color: #000 !important;
+    background-color: #d9d9d9;
+    font-weight: bolder;
+}
+.nav-pills > li > a:hover{
+    background-color: #f7f7f7;
+}
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:visited,
+.nav-pills > li.active > a:active {
+    color: #000;
+    background-color: #D9D9D9;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+
+    font-size: 100%;
+    font-weight: bold;
+    background-color: #336699;
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+    color: #fff;
+}
+.nav-title:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*登陆界面*/
+.blue-900{
+    background-color: #336699;
+}
+#formClass{
+    margin-top: 33%;
+}
+
+/*登陆按钮*/
+.panel-body > [aria-disabled=false]{
+    background-color: #AFA8A8;
+    color: #ffffff;
+}
+
+/*拟任职务*/
+.selectAdjust{
+    width:65%;
+    border: 0px;
+    border-bottom: 1px #ccc solid;
+}
+
+/*单位树图标*/
+
+.navi ul.nav li li a {
+    padding-left: 10%;
+}
+.navi ul.nav li a > i {
+    position: relative;
+    float: left;
+    width: 40px;
+    margin: -10px -10px;
+    overflow: hidden;
+    line-height: 36px;
+    text-align: center;
+}
+.glyphicon-th-large{
+    color: #8AC1F2;
+}
+.treeTitle h1{
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    width: 60%;
+    height:100%;
+
+}
+
+.treeIcon{
+    background-color: #8AC1F2;
+    width: 55px;
+    height:55px;
+}
+.treeMain{
+    background-color:#f7f7f7;
+    height: 100%;
+
+}
+
+.treeMain li>a:hover{
+    background-color: #f7f7f7;
+    text-decoration: underline;
+}
+
+/*整体色调*/
+.bg-light {
+    color: #58666e;
+    background-color: #f7f7f7;
+}
+.bg-light.dk, .bg-light .dk {
+    background-color: #f7f7f7;
+}
+.workBgColor{
+    background-color: #fff;
+}
+
+/*整体边框*/
+.b {
+    border: 0px solid rgba(0, 0, 0, 0.05);
+}
+
+.b-a {
+    border: 0px solid #dee5e7;
+}
+
+.b-t {
+    border-top: 0px solid #dee5e7;
+}
+
+.b-r {
+    border-right: 0px solid #dee5e7;
+}
+
+.b-b {
+    border-bottom: 0px solid #dee5e7;
+}
+
+.b-l {
+    border-left: 0px solid #dee5e7;
+}
+
+/*自适应屏幕*/
+@media (max-width: 366px){
+    #header,#headerLayout{
+        margin-top: 50px;
+    }
+}
+@media (min-width: 366px) and (max-width: 768px) {
+    #header,#headerLayout{
+        margin-top: 0px;
+    }
+}
+@media (min-width: 768px) and (max-width: 890px) {
+    #header,#headerLayout{
+        margin-top: 102px;
+    }
+}
+@media (min-width: 891px) and (max-width: 964px) {
+    #header,#headerLayout{
+        margin-top: 50px;
+    }
+}
+@media (min-width: 965px) and (max-width: 1085px) {
+    #header,#headerLayout{
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1086px) and (max-width: 1119px) {
+    #header,#headerLayout{
+        margin-top: 50px;
+    }
+}
+@media (min-width: 1119px) and (max-width: 1147px) {
+    #header,#headerLayout{
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 1148px) and (max-width: 1262px) {
+    #header,#headerLayout{
+        margin-top: 0px;
+    }
+}
+@media (min-width: 1263px){
+    #header,#headerLayout{
+        margin-top: 0px;
+    }
+}
+

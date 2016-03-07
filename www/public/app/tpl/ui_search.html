@@ -1,0 +1,41 @@
+<div class="row hbox hbox-auto-xs hbox-auto-sm" ng-controller="SearchController">
+  <div class="col-md-3  bg-light dk b-r bg-auto"><!--  style="position:fixed"  -->
+      <div class="vbox">
+          <div class="wrapper">
+              <div class="btn-group btn-group-justified">
+                  <a class="btn btn-dark" href="">快捷</a>
+                  <a class="btn btn-dark" href="">更多</a>
+                  <a class="btn btn-dark" href="">自定义</a>
+              </div>
+          </div>
+
+          <div class="">
+              <div class="cell scrollable hover">
+                  <div class="cell-inner">
+                      <div class="padder">
+                          <div class="list-group">
+                              <form class="bs-example form-horizontal ng-pristine ng-valid">
+                                  <div class="form-group list-group-item" ng-repeat="searchitem in searchlist | filter:{show:'less'}">
+                                      <label class="col-lg-4 control-label">{{searchitem.title}}</label>
+                                      <div class="col-lg-8">
+                                          <select class="form-control" name="{{searchitem.title}}" class="form-control">
+                                              <option ng-repeat="selectitem in searchitem.selectitem" value="{{selectitem.name}}">{{selectitem.name}}</option>
+                                          </select>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <button type="submit" class="btn w-full  btn-info font-bold">搜索</button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-9" style="">
+    <div ui-view ></div>
+  </div>
+</div>

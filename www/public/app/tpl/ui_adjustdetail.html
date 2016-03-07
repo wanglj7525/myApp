@@ -1,0 +1,66 @@
+<!--<div ng-controller="adjustdetailController">-->
+    <!--<script type="text/ng-template" id="adjustReasonModel.html">-->
+        <!--<div ng-include="'/public/app/tpl/ui_adjustreason_modal.html'"></div>-->
+    <!--</script>-->
+    <!--<div class="">-->
+        <!--<div class="row ">-->
+            <!--<div class="panel panel-default">-->
+                <!--&lt;!&ndash;11&ndash;&gt;-->
+                <!--<div class="panel-heading" style="position: relative">已选择的人员-->
+                    <!--<button type="submit" ui-sref="notree.adjustplan.detail({id:1})" class="btn btn-add btn-href" style="width: 150px">方案审核</button>-->
+                <!--</div>-->
+                <!--<table st-table="adjusttable"  class="table table-bordered">-->
+                    <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th>姓asdasdasd名</th>-->
+                        <!--<th>现任职务</th>-->
+                        <!--<th>拟免职务</th>-->
+                        <!--<th>拟任职务</th>-->
+                        <!--<th>调配原因</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody>-->
+                    <!--<tr ng-repeat="row in adjusttable" >-->
+                        <!--<td>{{row.name}}</td>-->
+                        <!--<td>{{row.company}}</td>-->
+                        <!--<td>{{row.company}}</td>-->
+                        <!--<td>-->
+                            <!--<select class="selectAdjust"  ng-model="favoriteTopping">-->
+                                <!--&lt;!&ndash;-->
+                                    <!--<md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'meat' }">{{topping.name}}</md-option>-->
+                                 <!--&ndash;&gt;-->
+                                <!--<option value="">请选择职务</option>-->
+                                <!--<option ng-value="topping.name" ng-repeat="topping in toppings">{{topping.name}}</option>-->
+                            <!--</select>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                        <!--&lt;!&ndash;-->
+                            <!--<select class="addReasonClass selectAdjust " ng-model="reasonAjust">-->
+                                <!--<option value="">调配原因</option>-->
+                                <!--<option  ng-value="reason.name" ng-repeat="reason in reasons">{{reason.title}}</option>-->
+                            <!--</select>-->
+                            <!--&ndash;&gt;-->
+                                <!--&lt;!&ndash;-->
+                                    <!--<select class="addReasonClass selectAdjust " ng-model="reasonAjust" ng-change="addReason()">-->
+                                    <!--<md-option ng-value="topping.name" ng-repeat="topping in toppings | filter: {category: 'meat' }">{{topping.name}}</md-option>-->
+                                 <!--&ndash;&gt;-->
+                            <!--<input type="text" name="country" class="autocomplete-dynamic">-->
+                        <!--</td>-->
+                        <!--<script type="text/javascript" src="/public/app/js/jquery.autocomplete.js"></script>-->
+                        <!--<script type="text/javascript" src="/public/app/js/adjustReason.js"></script>-->
+                        <!--<script type="text/javascript" >-->
+                            <!--$(function () {-->
+                                <!--var countriesArray = $.map(adjustReason, function (value, key) { return { value: value, data: key }; });-->
+                                <!--$('.autocomplete-dynamic').autocomplete({-->
+                                    <!--lookup: countriesArray-->
+                                <!--});-->
+                            <!--});-->
+                        <!--</script>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                <!--</table>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->

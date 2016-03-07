@@ -1,0 +1,39 @@
+<div class="row">
+  <table  st-table="charts" class="table table-bordered">
+    <thead>
+    <tr>
+      <th st-sort="name">姓名</th>
+      <th st-sort="company">职务</th>
+      <th st-sort="sex">性别</th>
+      <th st-sort="nation">民族</th>
+      <th st-sort="birthday">出生</th>
+      <th st-sort="place">籍贯</th>
+      <th st-sort="troops">入伍</th>
+      <th st-sort="party">入党</th>
+      <th st-sort="education">学历</th>
+      <th st-sort="school">学校</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="row in charts" >
+      <td>{{row.name}}111</td>
+      <td>{{row.company}}</td>
+      <td>{{row.sex}}</td>
+      <td>{{row.nation}}</td>
+      <td>{{row.birthday}}</td>
+      <td>{{row.palce}}</td>
+      <td>{{row.troops}}</td>
+      <td>{{row.party}}</td>
+      <td>{{row.education}}</td>
+      <td>{{row.school}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+   
+    </tfoot>
+  </table>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default" ng-click="cancel()">取消</button>
+  <button class="btn btn-primary" ng-click="ok()">确定</button>
+</div>

@@ -1,0 +1,20 @@
+<div flex class="vbox" ng-controller="AbnTestController">
+  <div class="hbox hbox-auto-xs hbox-auto-sm" >
+    <!--ng-controller="AbnTestController"-->
+    <div class="col">
+      <div class=""><!-- wrapper-md -->
+        <div class="b-a bg-light dk r r-2x">
+          <div class="row">
+            <div class="col-md-12 treeTitle"><h1>班子组成</h1></div>
+          </div>
+          <span ng-if="doing_async">...loading...</span>
+          <abn-tree tree-data="my_data" tree-control="my_tree" class="treeMain"
+                    on-select="my_tree_handler(branch)" expand-level="2"
+                    initial-selection="Granny Smith" icon-leaf="mdi"
+                    icon-expand="glyphicon glyphicon-triangle-right" icon-collapse="glyphicon glyphicon-triangle-bottom">
+          </abn-tree>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>

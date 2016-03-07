@@ -1,0 +1,176 @@
+{
+    "info": [
+        {
+            "label": "市委班子",
+            "data": 1,
+            "zhiwei":[{"id":1,"name":"市长","num":1,"level":1},{"id":2,"name":"副市长","num":6,"level":2},{"id":3,"name":"秘书长","num":1,"level":3}],
+            "children": [
+                {
+                    "label": "市委",
+                    "data": 11,
+                    "zhiwei":[{"id":1,"name":"市长1","num":1,"level":1},{"id":2,"name":"副市长1","num":6,"level":2},{"id":3,"name":"秘书长1","num":1,"level":3}],
+                    "children": [
+                        {
+                            "label": "市委1",
+                            "data": 111,
+                            "zhiwei":[{"id":1,"name":"市长3","num":1,"level":1},{"id":2,"name":"副市长3","num":6,"level":2},{"id":3,"name":"秘书长3","num":1,"level":3}],
+                            "children": [
+                                {
+                                    "label": "市委11",
+                                    "zhiwei":[{"id":1,"name":"市长5","num":1,"level":1},{"id":2,"name":"副市长5","num":6,"level":2},{"id":3,"name":"秘书长5","num":1,"level":3}],
+                                    "data": 141
+                                },
+                                {
+                                    "label": "市委12",
+                                    "zhiwei":[{"id":1,"name":"市长6","num":1,"level":1},{"id":2,"name":"副市长6","num":6,"level":2},{"id":3,"name":"秘书长6","num":1,"level":3}],
+                                    "data": 142
+                                },
+                                {
+                                    "label": "市委13",
+                                    "zhiwei":[{"id":1,"name":"市长7","num":1,"level":1},{"id":2,"name":"副市长7","num":6,"level":2},{"id":3,"name":"秘书长7","num":1,"level":3}],
+                                    "data": 143
+                                }
+                            ]
+                        },
+                        {
+                            "label": "市委2",
+                            "zhiwei":[{"id":1,"name":"市长8","num":1,"level":1},{"id":2,"name":"副市长8","num":6,"level":2},{"id":3,"name":"秘书长8","num":1,"level":3}],
+                            "data": 112
+                        },
+                        {
+                            "label": "市委3",
+                            "zhiwei":[{"id":1,"name":"市长9","num":1,"level":1},{"id":2,"name":"副市长9","num":6,"level":2},{"id":3,"name":"秘书长9","num":1,"level":3}],
+                            "data": 113
+                        }
+                    ]
+                },
+                {
+                    "label": "市人大",
+                    "data": 12
+                },
+                {
+                    "label": "市政协",
+                    "data": 13
+                },
+                {
+                    "label": "市政府",
+                    "data": 14,
+                    "children": [
+                        {
+                            "label": "市政府市委",
+                            "data": 141
+                        },
+                        {
+                            "label": "市政府党委",
+                            "data": 142
+                        },
+                        {
+                            "label": "市政府政协",
+                            "data": 143
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "党务口",
+            "data": 2,
+            "children": [
+                {
+                    "label": "党务办公室",
+                    "data": 21
+                },
+                {
+                    "label": "党务委员会",
+                    "data": 22,
+                    "children": [
+                        {
+                            "label": "党务委员会1",
+                            "data": 111,
+                            "children": [
+                                {
+                                    "label": "党务委员会11",
+                                    "data": 141
+                                },
+                                {
+                                    "label": "党务委员会12",
+                                    "data": 142
+                                },
+                                {
+                                    "label": "党务委员会13",
+                                    "data": 143
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "政务口",
+            "data": 3,
+            "children": [
+                {
+                    "label": "政务办公室",
+                    "data": 31,
+                    "children": [
+                        {
+                            "label": "政务委员会",
+                            "data": 311
+                        }
+                    ]
+                },
+                {
+                    "label": "政务室",
+                    "data": 32
+                },
+                {
+                    "label": "政务",
+                    "data": 33
+                }
+            ]
+        },
+        {
+            "label": "企事业口",
+            "data": 4
+        },
+        {
+            "label": "县市区",
+            "data": 5,
+            "children": [
+                {
+                    "label": "福清",
+                    "data": 51,
+                    "children": [
+                        {
+                            "label": "福清区委",
+                            "data": 511
+                        },
+                        {
+                            "label": "福清党委",
+                            "data": 511
+                        }
+                    ]
+                },
+                {
+                    "label": "长乐",
+                    "data": 52,
+                    "children": [
+                        {
+                            "label": "长乐区委",
+                            "data": 521
+                        },
+                        {
+                            "label": "长乐党委",
+                            "data": 521
+                        }
+                    ]
+                },
+                {
+                    "label": "闽侯",
+                    "data": 53
+                }
+            ]
+        }
+    ]
+}

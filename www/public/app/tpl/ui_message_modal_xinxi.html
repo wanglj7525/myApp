@@ -1,0 +1,312 @@
+<div class="panel panel-default" ng-controller="oneMessageXinxiController">
+    <!--<div class="panel-heading text-center"><h4>干部任免审批表11</h4></div>-->
+	<div class="panel panel-card">
+		<md-tabs md-selected="selectedIndex"  class="md-primary" flex>
+			<md-tab label="A01基本信息" >
+				<div  flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">标识号：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.id}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">姓名：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.name}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">性别：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.sex}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">出生日期：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.birthday}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">籍贯：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.palce}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">出生地：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.palce}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">民族：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.nation}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">健康状况：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.health}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">参加工作日期：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.troops}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">政治面貌：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.zhengzhi}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">参加组织日期：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.party}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">居民身份证号：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.shenfenzheng}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">专长：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.zhuanchang}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">重要信息来源备忘：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.beiwang}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">备用项1：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.beiyong1}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">备用项2：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.beiyong2}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">职级：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.zhiji}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">个人身份：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.gerenshenfen}}">
+										</div>
+									</div>
+									<div class="col-md-6 form-group">
+										<label class="col-md-6 control-label">人员状态：</label>
+										<div class="col-md-6">
+											<input class=" form-control" value="{{onemessage.zhuangtai}}">
+										</div>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<md-tab label="A02现任职务" >
+					<div flex>
+						<div class="wrapper" layout="column" >
+							<div >
+								<form class="form-horizontal">
+									<div class="row">
+										<div class="col-md-12 form-group">
+											<label class="col-md-4 control-label">现任职务：</label>
+											<div class="col-md-8">
+												<input class=" form-control" value="{{onemessage.company}}">
+											</div>
+										</div>
+									</div>
+
+								</form>
+							</div>
+						</div>
+					</div>
+			</md-tab>
+			<md-tab label="A06职称" >
+				<div flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<label class="col-md-4 control-label">职称：</label>
+										<div class="col-md-8">
+											<input class=" form-control" value="{{onemessage.zhicheng}}">
+										</div>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<md-tab label="A08学历" >
+				<div flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<label class="col-md-4 control-label">学历：</label>
+										<div class="col-md-8">
+											<input class=" form-control" value="{{onemessage.education}}">
+										</div>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<md-tab label="A14工资奖惩" >
+				<div flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<label class="col-md-12 ">2011年工资奖惩：无</label>
+										<label class="col-md-12 ">2012年工资奖惩：无</label>
+										<label class="col-md-12 ">2013年工资奖惩：无</label>
+										<label class="col-md-12 ">2014年工资奖惩：无</label>
+										<label class="col-md-12 ">2015年工资奖惩：工作优秀，奖励1000元</label>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<md-tab label="A15年度考核" >
+				<div flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<label class="col-md-12 ">2011年度考核：优秀</label>
+										<label class="col-md-12 ">2012年度考核：优秀</label>
+										<label class="col-md-12 ">2013年度考核：优秀</label>
+										<label class="col-md-12 ">2014年度考核：优秀</label>
+										<label class="col-md-12 ">2015年度考核：优秀</label>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<md-tab label="A17简历" >
+				<div flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<pre>xm1，男，1，1955年07月生，福清龙田人，1，1974年12月参加工作，高中学历。
+    1974.12 -- 1976.05  步兵267团2连战士
+    1976.05 -- 1977.03  步兵267团1营2连副班长
+    1977.03 -- 1978.11  步兵261团2连9班班长
+    1978.11 -- 1979.11  步兵261团1营2连1排排长
+    1979.11 -- 1981.08  步兵261团1营3连副政治指导员
+    1981.08 -- 1983.05  步兵第261团政治处副连职群工干事
+    1983.05 -- 1983.08  步兵第261团政治处正连职群工干事    1983.08 -- 1986.06  步兵第261团1营1连
+                        政治指导员
+    1986.06 -- 1990.05  福清县江镜镇政府办公室干事
+    1990.05 -- 1991.01  福清市江镜镇政府办公室副主任
+    1990.11 -- 1995.08  福清市江镜镇政府副镇长
+    1995.08 -- 1996.06  福清市江镜镇党委副书记
+    1996.06 -- 1998.09  福清市沙埔镇党委副书记、镇长
+    1998.09 -- 1999.01  福清市沙埔镇党委副书记、镇长、人大主席
+    1999.01 -- 2000.12  福清市沙埔镇党委书记、人大主席    2000.12 -- 2004.12  福清市三山镇党委党
+                        委书记
+    2004.12 -- 2006.07  福清市环境保护局局长    2006.07 --   .      福清市纪委副书记、监察局局长
+
+										</pre>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<md-tab label="家庭成员" >
+				<div flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<label class="col-md-12 ">父亲：</label>
+										<label class="col-md-12 ">母亲：</label>
+										<label class="col-md-12 ">孩子：</label>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<md-tab label="照片" >
+				<div flex>
+					<div class="wrapper" layout="column" >
+						<div >
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<img src="/public/app/img/a1.jpg" class="w-full r-t" alt="Washed Out">
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</md-tab>
+			<!--<md-tab ng-repeat="tab in tabs"-->
+					<!--ng-disabled="tab.disabled"-->
+					<!--label="{{tab.title}}" >-->
+				<!--<div class="b-t" flex>-->
+					<!--<div class="wrapper tab{{$index%4}}" layout="column" layout-align="space-around center">-->
+						<!--<div ng-bind="tab.content" class="m-b-lg"></div>-->
+						<!--&lt;!&ndash;<md-button class="md-primary md-raised" ng-click="removeTab( tab )">&ndash;&gt;-->
+							<!--&lt;!&ndash;Remove Tab&ndash;&gt;-->
+						<!--&lt;!&ndash;</md-button>&ndash;&gt;-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</md-tab>-->
+		</md-tabs>
+		</div>
+  </div>

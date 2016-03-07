@@ -1,0 +1,46 @@
+<div ng-controller="SetDaimaCtrl">
+     <div class="col-padding col-md-3  bg-light dk b-r bg-auto"><!--  style="position:fixed"  -->
+          <div class="" >
+               <ul class="nav nav-pills nav-stacked ">
+                    <li ui-sref-active="active" ng-repeat="item in daimalist" >
+                         <a ng-click="selectdaima(item)">
+                              {{item.name}}
+                         </a>
+                    </li>
+               </ul>
+          </div>
+     </div>
+     <div class="col-padding col-md-9" style="">
+          <div class="row ">
+               <div class="panel panel-default">
+                    <div class="panel-heading" style="position: relative">{{daima.name}}
+                         <button type="submit"  class="btn btn-add btn-href" style="width: 150px;">添加</button>
+                    </div>
+                    <table st-table="daima.childlist"  class="table table-bordered">
+                         <thead>
+                         <tr>
+                              <th>id</th>
+                              <th>名称</th>
+                              <th>操作</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr ng-repeat="row in daima.childlist" >
+                              <td>{{row.id}}</td>
+                              <td>{{row.name}}</td>
+                              <td>
+                                   <button type="button"  class="btn btn-href ">
+                                        修改
+                                   </button>
+                                   <button type="button"  class="btn btn-href ">
+                                        删除
+                                   </button>
+                              </td>
+                         </tr>
+                         </tbody>
+                    </table>
+               </div>
+
+          </div>
+     </div>
+</div>

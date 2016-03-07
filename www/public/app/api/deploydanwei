@@ -1,0 +1,87 @@
+{
+    "info": [
+        {
+            "level": 1,
+            "jibiename": "市长",
+            "people": [
+                {
+                    "jibie": "1",
+                    "id": 1,
+                    "img": "/public/app/img/a0.jpg",
+                    "name": "张三1",
+                    "sex": "男",
+                    "company": "市长",
+                    "nation": "汉",
+                    "birthday": "19551111",
+                    "palce": "福清龙田",
+                    "troops": "19771212",
+                    "party": "19771212",
+                    "education": "本科",
+                    "school": "福建师范"
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "jibiename": "副市长",
+            "people": [
+                {
+                    "id": 5,
+                    "img": "/public/app/img/a4.jpg",
+                    "name": "张三4",
+                    "sex": "男",
+                    "company": "副市长",
+                    "nation": "汉",
+                    "birthday": "19551111",
+                    "palce": "福清龙田",
+                    "troops": "19771212",
+                    "party": "19771212",
+                    "education": "本科",
+                    "school": "福建师范"
+                },
+                {
+                    "id": 2,
+                    "img": "/public/app/img/a1.jpg",
+                    "name": "张三2",
+                    "sex": "男",
+                    "company": "副市长",
+                    "nation": "汉",
+                    "birthday": "19551111",
+                    "palce": "福清龙田",
+                    "troops": "19771212",
+                    "party": "19771212",
+                    "education": "本科",
+                    "school": "福建师范"
+                },
+                {
+                    "id": 3,
+                    "img": "/public/app/img/a2.jpg",
+                    "name": "张三3",
+                    "sex": "男",
+                    "company": "副市长",
+                    "nation": "汉",
+                    "birthday": "19551111",
+                    "palce": "福清龙田",
+                    "troops": "19771212",
+                    "party": "19771212",
+                    "education": "本科",
+                    "school": "福建师范"
+                },
+                {
+                    "id": 4,
+                    "img": "/public/app/img/a3.jpg",
+                    "name": "张三4",
+                    "sex": "男",
+                    "company": "副市长",
+                    "nation": "汉",
+                    "birthday": "19551111",
+                    "palce": "福清龙田",
+                    "troops": "19771212",
+                    "party": "19771212",
+                    "education": "本科",
+                    "school": "福建师范"
+                }
+            ]
+        }
+    ]
+}

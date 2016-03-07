@@ -1,0 +1,88 @@
+﻿<div class="app-header blue-800 navbar-inverse navbar-fixed-top "  role="navigation" rem-style="position:fixed;width:100%;top:0;"><!-- rem- -->
+    <!-- navbar header -->
+      <div class="navbar-header blue-800">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" data-target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" data-target=".md-aside" ui-scroll-to="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+        <a href="/app/worktip/list/" class="navbar-brand text-lt">
+          <!-- <img src="/public/app/img/logo.png"> -->
+          <span class="hidden-folded">{{app.name}}</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <!-- / navbar header -->
+
+      <!-- navbar collapse -->
+      <div class="ui-nav collapse navbar-collapse box-shadow blue-800">
+
+        <!-- link and dropdown -->
+        <ul class="nav navbar-nav">
+          <li  ui-sref="app.worktip.list" ui-sref-active="active" ng-click="changeMenu(true,false)"><!--class="open"-->
+            <a ui-sref="app.worktip.list"  href="/app/worktip/list">
+              <span class="nav-title">工作提示</span>
+            </a>
+          </li>
+          <li ui-sref="app.message" ui-sref-active="active" ng-click="changeMenu(true,true)">
+            <a ui-sref="app.message" href="/app/message">
+              <span class="nav-title">信息浏览</span>
+            </a>
+          </li>
+          <li ui-sref="app.analysis" ui-sref-active="active" ng-click="changeMenu(true,false)">
+            <a ui-sref="app.analysis" href="/app/analysis">
+              <span class="nav-title">班子分析</span>
+            </a>
+          </li>
+
+          <li ui-sref="app.deploy" ui-sref-active="active" ng-click="changeMenu(true,false)">
+            <a ui-sref="app.deploy" href="/app/deploy">
+              <span class="nav-title">班子调配</span>
+            </a>
+          </li>
+          <li ui-sref="app.adjust" ui-sref-active="active" ng-click="changeMenu(true,false)">
+            <a ui-sref="app.adjust" href="/app/adjust">
+              <span class="nav-title">调整一览</span>
+            </a>
+          </li>
+          <li ui-sref="app.adjustplan.detail" ng-class="{'active':$state.includes('app.adjustplan')}" ng-click="changeMenu(false,false)">
+            <a ui-sref="app.adjustplan.detail" href="/app/adjustplan/detail">
+              <span class="nav-title">调整方案</span>
+            </a>
+          </li>
+
+          <!--根据权限隐藏 菜单 还需要在路由中 根据权限判断 否则可以在地址栏手动输入地址-->
+          <li  ui-sref="app.setting.tree" ng-if="Auth.roleid()==1" ng-class="{'active':$state.includes('app.setting')}" ng-click="changeMenu(false,false)">
+            <a  ui-sref="app.setting.tree" href="/setting">
+              <span class="nav-title">系统设置</span>
+            </a>
+          </li>
+
+        </ul>
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right blue-800">
+        <!--
+          <li class="hidden-xs">
+            <a ui-fullscreen></a>
+          </li>
+         -->
+          <!-- <li class="dropdown" dropdown ng-controller="TimeController">
+            <a href class="dropdown-toggle" dropdown-toggle>
+              <span ng-cloak>{{clock.time | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+            </a>
+          </li> -->
+          <li>
+            <a class="nav-title" style="color: yellow">当前选择：{{treeselected}}</a>
+          </li>
+              <li>
+                <a ng-click="logout()" class="nav-title"><i class="fa fa-power-off"></i>退出</a>
+                <!--<a ui-sref="access.signin" class="nav-title"><i class="fa fa-power-off"></i>退出</a>-->
+              </li>
+         </ul>
+        <!-- / navbar right -->
+
+      </div>
+      <!-- / navbar collapse -->
+</div>

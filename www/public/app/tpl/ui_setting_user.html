@@ -1,0 +1,43 @@
+<div ng-controller="SetUserCtrl">
+     <div class="panel panel-default">
+          <div class="panel-heading" style="position: relative">用户管理
+               <button type="submit" class="btn btn-add btn-href" style="width: 150px;" >添加</button>
+          </div>
+          <table st-table="userlist"  class="table table-bordered">
+               <thead>
+               <tr>
+                    <th width="10%">序号</th>
+                    <th>用户名</th>
+                    <th width="20%">登录名</th>
+                    <th>角色</th>
+                    <th>密码</th>
+                    <th>操作</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr ng-repeat="row in userlist " >
+                    <td ng-bind="$index+1">1</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.loginname}}</td>
+                    <td >{{row.role}}</td>
+                    <td >{{row.pass}}</td>
+                    <td>
+                         <button type="button"  class="btn btn-href ">
+                              修改
+                         </button>
+                         <button type="button"  class="btn btn-href ">
+                              删除
+                         </button>
+                    </td>
+               </tr>
+               </tbody>
+               <tfoot>
+               <tr>
+                    <td colspan="6" class="text-center">
+                         <div st-pagination="" st-items-by-page="10" st-displayed-pages="7" class="no-margin"></div>
+                    </td>
+               </tr>
+               </tfoot>
+          </table>
+     </div>
+</div>

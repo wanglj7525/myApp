@@ -1,0 +1,43 @@
+<div class="modal-header">
+	<div style="position: relative">
+		<span >
+			<h3 class="modal-title">调配详情</h3>
+		</span>
+
+
+	</div>
+</div>
+<div class="modal-body">
+	<form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-date-disabled">
+		<div class="form-group">
+			<label class="col-md-3 control-label">调配原因</label>
+
+			<div class="col-md-9 row">
+				<div  class=" m-l-n">
+					<select required="" class="form-control" ng-model="reason" ng-options=" a.reason for a in reasonlist">
+						<!--<option value="">省</option>-->
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">调配职务</label>
+
+			<div class="col-md-9 row">
+				<div  class=" m-l-n">
+					<select class="form-control"  ng-model="zhiwei.id">
+						<option ng-selected="zhiwei.id == item.id" ng-repeat="item in tolist" ng-value="item.id">{{item.reason}}</option>
+					</select>
+
+					<!--<select required="" ng-change="selectAction()" class="form-control" ng-model="zhiwei" ng-options=" o.id as o.reason for o in  tolist">-->
+						<!--&lt;!&ndash;<option value="">省</option>&ndash;&gt;-->
+					<!--</select>-->
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-default" ng-click="cancel()">取消</button>
+	<button class="btn btn-primary" ng-click="ok()">确定</button>
+</div>

@@ -1,0 +1,191 @@
+<div ng-controller="SetTreeCtrl" ng-init="isEditZW=false">
+     <script type="text/ng-template" id="saveAddZWModel.html">
+          <div ng-include="'/public/app/tpl/ui_treezwadd_modal.html'"></div>
+     </script>
+     <script type="text/ng-template" id="updateZWModel.html">
+          <div ng-include="'/public/app/tpl/ui_treezwupdate_modal.html'"></div>
+     </script>
+     <script type="text/ng-template" id="deleteZWModel.html">
+          <div ng-include="'/public/app/tpl/ui_treezwdelete_modal.html'"></div>
+     </script>
+     <script type="text/ng-template" id="saveTreeModel.html">
+          <div ng-include="'/public/app/tpl/ui_tree_modal.html'"></div>
+     </script>
+     <script type="text/ng-template" id="saveAddTreeModel.html">
+          <div ng-include="'/public/app/tpl/ui_treeadd_modal.html'"></div>
+     </script>
+     <script type="text/ng-template" id="deleteTreeModel.html">
+          <div ng-include="'/public/app/tpl/ui_treedelete_modal.html'"></div>
+     </script>
+     <div class="row"  ng-show="!isEditZW">
+          <div class="analysis col-md-3">
+               <div class="panel panel-default">
+                    <div class="panel-heading" style="position: relative">一级树管理
+                         <button ng-click="addtree(1)" class="btn btn-add btn-href">添加</button>
+                    </div>
+                    <table st-table="treelist"  class="table table-bordered ">
+                         <thead>
+                         <tr>
+                              <th></th>
+                              <th>名称</th>
+                              <th>操作</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr ng-repeat="row in treelist " >
+                              <td ng-bind="$index+1">1</td>
+                              <td><button class="btn btn-default w-full" ng-click="showsecond(row)"> {{row.label}}</button></td>
+                              <td>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatetree(row)">
+                                        修改
+                                   </button>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatezhiweilist(row)">
+                                        修改职位
+                                   </button>
+                                   <button ng-show="!row.children.length" class="btn-padding btn btn-href "  ng-click="deletetree(1,$index,row)">
+                                        删除
+                                   </button>
+                              </td>
+                         </tr>
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+          <div ng-show="second.children.length" class="analysis col-md-3">
+               <div class="panel panel-default">
+                    <div class="panel-heading" style="position: relative">{{second.label}}
+                         <button ng-click="addtree(2)" class="btn btn-add btn-href">添加</button>
+                    </div>
+                    <table st-table="second.children"  class="table table-bordered ">
+                         <thead>
+                         <tr>
+                              <th></th>
+                              <th>名称</th>
+                              <th>操作</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr ng-repeat="row in second.children " >
+                              <td ng-bind="$index+1">1</td>
+                              <td><button class="btn btn-default w-full" ng-click="showthird(row)"> {{row.label}}</button></td>
+                              <td>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatetree(row)">
+                                        修改
+                                   </button>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatezhiweilist(row)">
+                                        修改职位
+                                   </button>
+                                   <button ng-show="!row.children.length" class="btn-padding btn btn-href "  ng-click="deletetree(2,$index,row)">
+                                        删除
+                                   </button>
+                              </td>
+                         </tr>
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+          <div ng-show="third.children.length" class="analysis col-md-3">
+               <div class="panel panel-default">
+                    <div class="panel-heading" style="position: relative">{{third.label}}
+                         <button ng-click="addtree(3)" class="btn btn-add btn-href"  >添加</button>
+                    </div>
+                    <table st-table="third.children"  class="table table-bordered ">
+                         <thead>
+                         <tr>
+                              <th></th>
+                              <th>名称</th>
+                              <th>操作</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr ng-repeat="row in third.children " >
+                              <td ng-bind="$index+1">1</td>
+                              <td><button class="btn btn-default w-full" ng-click="showfouth(row)"> {{row.label}}</button></td>
+                              <td>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatetree(row)">
+                                        修改
+                                   </button>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatezhiweilist(row)">
+                                        修改职位
+                                   </button>
+                                   <button ng-show="!row.children.length"  class="btn-padding btn btn-href "  ng-click="deletetree(3,$index,row)">
+                                        删除
+                                   </button>
+                              </td>
+                         </tr>
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+          <div ng-show="fouth.children.length" class="analysis col-md-3">
+               <div class="panel panel-default">
+                    <div class="panel-heading" style="position: relative">{{fouth.label}}
+                         <button ng-click="addtree(4)" class="btn btn-add btn-href">添加</button>
+                    </div>
+                    <table st-table="fouth.children"  class="table table-bordered ">
+                         <thead>
+                         <tr>
+                              <th>id</th>
+                              <th>名称</th>
+                              <th>操作</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr ng-repeat="row in fouth.children " >
+                              <td ng-bind="$index+1">1</td>
+                              <td>{{row.label}}</td>
+                              <td>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatetree(row)">
+                                        修改
+                                   </button>
+                                   <button  class="btn-padding btn btn-href " ng-click="updatezhiweilist(row)">
+                                        修改职位
+                                   </button>
+                                   <button ng-show="!row.children.length" class=" btn-padding btn btn-href "  ng-click="deletetree(4,$index,row)">
+                                        删除
+                                   </button>
+                              </td>
+                         </tr>
+                         </tbody>
+                    </table>
+               </div>
+          </div>
+     </div>
+     <div class="row" ng-show="isEditZW">
+          <div class="panel panel-default">
+               <div class="panel-heading" style="position: relative">
+                    <button class="btn btn-info" ng-click="isEditZW=false">返回</button>
+                    <span style="margin-left: 20px">{{editzw.label}}</span>
+                    <button ng-click="addzw()" class="btn btn-add btn-href">添加</button>
+               </div>
+               <table st-table="editzw.zhiwei"  class="table table-bordered ">
+                    <thead>
+                    <tr>
+                         <th></th>
+                         <th>职位名称</th>
+                         <th>数量</th>
+                         <th>level</th>
+                         <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="row in editzw.zhiwei " >
+                         <td ng-bind="$index+1">1</td>
+                         <td>{{row.name}}</td>
+                         <td>{{row.num}}</td>
+                         <td>{{row.level}}</td>
+                         <td>
+                              <button  class="btn-padding btn btn-href " ng-click="updatezhiwei(row)">
+                                   修改
+                              </button>
+                              <button  class="btn-padding btn btn-href "  ng-click="deletezhiwei($index,row)">
+                                   删除
+                              </button>
+                         </td>
+                    </tr>
+                    </tbody>
+               </table>
+          </div>
+
+     </div>
+</div>

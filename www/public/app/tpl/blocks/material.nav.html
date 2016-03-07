@@ -1,0 +1,189 @@
+<!-- list -->
+<ul class="nav">
+  <li class="active">
+    <a href md-ink-ripple class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon"></i>
+      <span class="font-bold">班子组成</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <div flex class="vbox">
+        <!--<div class=""> &lt;!&ndash; wrapper &ndash;&gt;-->
+          <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control input-sm" placeholder="search" ng-model="query">-->
+            <!--<span class="input-group-addon input-sm"><i class="fa fa-search"></i></span>-->
+          <!--</div>-->
+        <!--</div>-->
+        <div class="hbox hbox-auto-xs hbox-auto-sm" ng-controller="AbnTestController">
+          <div class="col">
+            <div class=""><!-- wrapper-md -->
+              <div class="b-a bg-light dk r r-2x">
+                <span ng-if="doing_async">...loading...</span>
+                <abn-tree tree-data="my_data" tree-control="my_tree" class="treeMain"
+                          on-select="my_tree_handler(branch)" expand-level="2"
+                          initial-selection="Granny Smith" icon-leaf="mdi"
+                          icon-expand="glyphicon glyphicon-triangle-right" icon-collapse="glyphicon glyphicon-triangle-bottom" style="background-color: #fff">
+                </abn-tree>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </ul>
+  </li>
+  <li ng-if="hassearch">
+    <a href md-ink-ripple class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon"></i>
+      <span class="font-bold">快捷查询</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <div class="vbox">
+        <div class=""  ng-controller="SearchController">
+          <div class="cell scrollable hover">
+            <div class="cell-inner">
+              <div class="padder">
+                <div class="list-group">
+                  <form class="bs-example form-horizontal ng-pristine ng-valid">
+                    <div class="form-group list-group-item" ng-repeat="searchitem in searchlist | filter:{show:'less'}">
+                      <div class="list-group-item-heading">{{searchitem.title}}</div>
+                      <button class="btn btn-default left-button " ng-repeat="selectitem in searchitem.selectitem" ng-init="isSelected = false" ng-click="isSelected = !isSelected"  selectbutton="isSelected">{{selectitem.name}}</button>
+                    </div>
+
+                    <div class="form-group">
+                      <button type="submit" class="btn w-full  btn-info font-bold">搜索</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </li>
+  <li  ng-if="hassearch">
+    <a href md-ink-ripple class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon"></i>
+      <span class="font-bold">更多查询</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <div class="vbox">
+        <div class=""  ng-controller="SearchController">
+          <div class="cell scrollable hover">
+            <div class="cell-inner">
+              <div class="padder">
+                <div class="list-group">
+                  <form class="bs-example form-horizontal ng-pristine ng-valid">
+                    <div class="form-group list-group-item" ng-repeat="searchitem in searchlist | filter:{show:'less'}">
+                      <div class="list-group-item-heading">{{searchitem.title}}</div>
+                      <button class="btn btn-default left-button " ng-repeat="selectitem in searchitem.selectitem" ng-init="isSelected = false" ng-click="isSelected = !isSelected"  selectbutton="isSelected">{{selectitem.name}}</button>
+                    </div>
+
+                    <div class="form-group">
+                      <button type="submit" class="btn w-full  btn-info font-bold">搜索</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </li>
+  <!--<li >-->
+    <!--<a href md-ink-ripple class="auto">-->
+      <!--<span class="pull-right text-muted">-->
+        <!--<i class="fa fa-fw fa-angle-right text"></i>-->
+        <!--<i class="fa fa-fw fa-angle-down text-active"></i>-->
+      <!--</span>-->
+      <!--<i class="glyphicon glyphicon-th-large icon"></i>-->
+      <!--<span class="font-bold">固定查询</span>-->
+    <!--</a>-->
+    <!--<ul class="nav nav-sub dk nav-stacked" ng-controller="SearchGuController">-->
+          <!--&lt;!&ndash;<ul class="nav nav-sub dk nav-stacked ">&ndash;&gt;-->
+            <!--<li ui-sref-active="active">-->
+              <!--<a >-->
+                <!--全部-->
+              <!--</a>-->
+            <!--</li>-->
+            <!--<li ng-repeat="item in searchguinfo" ui-sref-active="active">-->
+              <!--<a>-->
+                <!--{{item.name}}-->
+              <!--</a>-->
+            <!--</li>-->
+          <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--<li >-->
+    <!--<a href md-ink-ripple class="auto">-->
+      <!--<span class="pull-right text-muted">-->
+        <!--<i class="fa fa-fw fa-angle-right text"></i>-->
+        <!--<i class="fa fa-fw fa-angle-down text-active"></i>-->
+      <!--</span>-->
+      <!--<i class="glyphicon glyphicon-th-large icon"></i>-->
+      <!--<span class="font-bold">自定义查询</span>-->
+    <!--</a>-->
+    <!--<ul class="nav nav-sub dk">-->
+      <!--<div class="vbox">-->
+        <!--<div class=""  ng-controller="SearchController">-->
+          <!--<div class="cell scrollable hover">-->
+            <!--<div class="cell-inner">-->
+              <!--<div class="padder">-->
+                <!--<div class="list-group">-->
+                  <!--<form class="bs-example form-horizontal ng-pristine ng-valid">-->
+                    <!--<div class="form-group list-group-item" ng-repeat="searchitem in searchlist | filter:{show:'less'}">-->
+                      <!--<div class="list-group-item-heading">{{searchitem.title}}</div>-->
+                      <!--<button class="btn btn-default left-button " ng-repeat="selectitem in searchitem.selectitem" ng-init="isSelected = false" ng-click="isSelected = !isSelected"  selectbutton="isSelected">{{selectitem.name}}</button>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+
+                      <!--<input class="form-control" type="text" placeholder="请输入保存名称">-->
+                      <!--<button type="submit" class="btn w-full  btn-info font-bold">保存查询条件</button>-->
+                    <!--</div>-->
+                  <!--</form>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--<li >-->
+    <!--<a href md-ink-ripple class="auto">-->
+      <!--<span class="pull-right text-muted">-->
+        <!--<i class="fa fa-fw fa-angle-right text"></i>-->
+        <!--<i class="fa fa-fw fa-angle-down text-active"></i>-->
+      <!--</span>-->
+      <!--<i class="glyphicon glyphicon-th-large icon"></i>-->
+      <!--<span class="font-bold">筛选查询</span>-->
+    <!--</a>-->
+    <!--<ul class="nav nav-sub dk nav-stacked" ng-controller="SearchGuController">-->
+      <!--&lt;!&ndash;<ul class="nav nav-sub dk nav-stacked ">&ndash;&gt;-->
+      <!--<li ui-sref-active="active">-->
+        <!--<a >-->
+          <!--全部-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li ng-repeat="item in searchguinfo" ui-sref-active="active">-->
+        <!--<a>-->
+          <!--{{item.name}}-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+    <!--</ul>-->
+  <!--</li>-->
+</ul>

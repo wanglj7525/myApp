@@ -1,0 +1,34 @@
+<div class="modal-header">
+	<div style="position: relative">
+		<span >
+			<h3 class="modal-title">选择或者新建一个方案</h3>
+		</span>
+	</div>
+</div>
+<div class="modal-body">
+	<form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-date-disabled">
+		<div class="form-group">
+			<label class="col-md-3 control-label">选择方案</label>
+
+			<div class="col-md-9 row">
+				<div  class=" m-l-n">
+					<select required="" class="form-control" ng-model="first" ng-options=" a.name for a in adjustlist">
+						<!--<option value="">省</option>-->
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">新建方案</label>
+			<div class="col-md-9 row">
+				<div  class=" m-l-n">
+					<input class="form-control" type="text">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-default" ng-click="cancel()">取消</button>
+	<button class="btn btn-primary" ng-click="ok()">确定</button>
+</div>

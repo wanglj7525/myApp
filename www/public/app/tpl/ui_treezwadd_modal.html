@@ -1,0 +1,39 @@
+<div class="modal-header">
+	<div style="position: relative">
+		<span >
+			<h3 class="modal-title">添加职位1</h3>
+		</span>
+	</div>
+</div>
+<div class="modal-body">
+	<form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-date-disabled">
+		<div class="form-group">
+			<label class="col-md-3 control-label">名称</label>
+			<div class="col-md-9 row">
+				<div  class=" m-l-n">
+					<input class="form-control" type="text" ng-model="zws.name">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">人数</label>
+			<div class="col-md-9 row">
+				<div  class=" m-l-n">
+					<input class="form-control" type="text" ng-model="zws.num">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-3 control-label">level</label>
+			<div class="col-md-9 row">
+				<div  class=" m-l-n">
+					<input class="form-control" type="text" ng-model="zws.level">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-default" ng-click="cancel()">取消</button>
+	<button class="btn btn-primary" ng-click="ok()">确定</button>
+</div>

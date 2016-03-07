@@ -1,0 +1,88 @@
+<div class="modal-body">
+	<form editable-form name="tableform" onaftersave="saveTable()" oncancel="cancel()">
+			<!--ng-controller="oneMessageController"-->
+			<table st-table="shujuCollection" class="table table-bordered table-hover table-condensed bg-white-only table-responsive"  ng-init="tableform.$show()">
+				<thead>
+					<tr collapse="7"><h4>干部信息添加表</h4></tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td width="13%">姓名</td>
+					<td width="13%">
+						<!-- editable username (text with validation) -->
+						<span editable-text="people.name" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.name || '' }}</span>
+					</td>
+					<td width="13%">性别</td>
+					<td width="13%"><span editable-text="people.sex" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.sex || '' }}</span></td>
+					<td width="13%">出生年月</td>
+					<td width="13%"><span editable-text="people.birthday" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.birthday || '' }}</span></td>
+					<td width="22%" rowspan="4">
+						<input type="file" name="carpoolpic1" id="carpoolpic1"  onchange="changeImgadd(this)" style="width: 100%"/>
+						<img src="/public/app/img/a.png" ng-src="{{people.img}}" class="w-full r-t img-responsive" alt="Washed Out" id="prevadd"></td>
+						<script>
+							var image = '';
+							function changeImgadd(file){
+								if(!file.files || !file.files[0]){
+									return;
+								}
+								var reader = new FileReader();
+								reader.onload = function(evt){
+									document.getElementById('prevadd').src = evt.target.result;
+									image = evt.target.result;
+								}
+								reader.readAsDataURL(file.files[0]);
+							}
+						</script>
+				</tr>
+				<tr>
+					<td>民族</td>
+					<td><span editable-text="people.nation" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.nation || '' }}</span></td>
+					<td>籍贯</td>
+					<td><span editable-text="people.jiguan" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.jiguan || '' }}</span></td>
+					<td>出生地</td>
+					<td><span editable-text="people.chusheng" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.chusheng || '' }}</span></td>
+				</tr>
+				<tr>
+					<td>入党时间</td>
+					<td><span editable-text="people.party" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.party || '' }}</span></td>
+					<td>参加工作时间</td>
+					<td><span editable-text="people.troops" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.troops || '' }}</span></td>
+					<td>健康状况</td>
+					<td><span editable-text="people.health" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.health || '' }}</span></td>
+				</tr>
+				<tr>
+					<td>专业技术职务</td>
+					<td colspan="2"><span editable-text="people.zhuanye" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.zhuanye || '' }}</span></td>
+					<td>熟悉专业有何特长</td>
+					<td colspan="2"><span  editable-text="people.techang" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.techang || '' }}</span></td>
+				</tr>
+				<tr>
+					<td rowspan="2">学历学位</td>
+					<td>全日制教育</td>
+					<td colspan="2"><span editable-text="people.education1" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.education1 || '' }}</span> </td>
+					<td>毕业院校及专业</td>
+					<td colspan="2"><span editable-text="people.school1" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.school1 || '' }}</span> </td>
+				</tr>
+				<tr>
+					<td>在职教育</td>
+					<td colspan="2"><span editable-text="people.education2" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.education2 || '' }}</span> </td>
+					<td>毕业院校及专业</td>
+					<td colspan="2"><span editable-text="people.school2" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.school2 || '' }}</span> </td>
+				</tr>
+				<tr>
+					<td colspan="2">现任职务</td>
+					<td colspan="5"><span editable-text="people.company" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.company || '' }}</span></td>
+				</tr>
+				<tr>
+					<td>简历</td>
+					<td colspan="6"><span style="width: 500px" editable-textarea="people.jianli" e-form="tableform" onbeforesave="checkName($data, user.id)">{{ people.jianli || '' }}</span> </td>
+				</tr>
+				</tbody>
+			</table>
+	</form>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-default" ng-click="cancel()">取消</button>
+	<button class="btn btn-primary" ng-click="ok()">确定</button>
+</div>

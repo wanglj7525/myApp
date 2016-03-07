@@ -1,0 +1,28 @@
+<div ng-controller="plandetailcontroller">
+    <div class="panel panel-default" ng-repeat="row in plandetail | filter:{id:id}">
+        <div class="panel-heading">{{row.title}}</div>
+        <div class="panel-body">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <div class="list-group-item-heading">
+                        一. 调整原因
+                    </div>
+                    <div class="list-group-item-text">
+                        {{row.reason}}
+                    </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="list-group-item-heading">
+                        二. 调整方案
+                    </div>
+                    <div class="list-group-item-text">
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="one in row.planlist">{{one.name}},{{one.sex}},{{one.birthday}},現任{{one.company}},拟免{{one.company}}，拟任{{one.newcompany}}</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

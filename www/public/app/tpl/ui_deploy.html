@@ -1,0 +1,195 @@
+<!--<script type="text/javascript">-->
+<!--$(function(){-->
+<!--console.log("222");-->
+<!--//		//获取要定位元素距离浏览器顶部的距离-->
+<!--//		var navH = $(".baocun").offset().top;-->
+<!--//滚动条事件-->
+<!--$(window).scroll(function(){-->
+<!--console.log("1111");-->
+<!--//获取滚动条的滑动距离-->
+<!--var scroH = $(this).scrollTop();-->
+<!--//滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定-->
+<!--if(scroH>=50){-->
+<!--$(".baocun").css({"position":"fixed","top":"50px"});-->
+<!--}else if(scroH<50){-->
+<!--$(".baocun").css({"position":"static"});-->
+<!--}-->
+<!--})-->
+<!--})-->
+<!--</script>-->
+<div class="row col-padding" ng-controller="deployCtrl" >
+	<!--<div class="bg-light md-whiteframe-z0 md-aside md-content hidden-xs affix" >-->
+	<!--<nav ui-nav  ng-include="'/public/app/tpl/blocks/nosearch.nav.html'"></nav>-->
+	<!--</div>-->
+	<div  class="md-right">
+		<script type="text/ng-template" id="savePeopleModel.html">
+			<div ng-include="'/public/app/tpl/ui_deploysave_modal.html'"></div>
+		</script>
+		<script type="text/ng-template" id="selectPeopleModel.html">
+			<div ng-include="'/public/app/tpl/ui_deploy_modal.html'"></div>
+		</script>
+		<script type="text/ng-template" id="myModalContent.html">
+			<div ng-include="'/public/app/tpl/ui_message_modal.html'"></div>
+		</script>
+		<div class="col-md-4 col-padding" ng-style="{height:showheight}" style="overflow-y: auto">
+			<!--<div>-->
+				<!--<accordion >-->
+					<!--<accordion-group is-open="status.leftopen" class="b-info">-->
+						<!--<accordion-heading class="btn-info">-->
+							<!--请选择班子进行调整 <label class="text-danger"> （点击显示或隐藏）</label><i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': status.leftopen, 'fa-angle-right': !status.leftopen}"></i>-->
+						<!--</accordion-heading>-->
+						<!--<div class="vbox">-->
+							<!--<form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-date-disabled" ng-submit="selectdw(first,second,third)">-->
+								<!--<div class="form-group">-->
+									<!--<label class="col-md-3 control-label">请选择</label>-->
+									<!--<div class="col-md-9 row">-->
+										<!--<div  >-->
+											<!--<select required="" class="form-control" ng-model="first" ng-options=" a.label for a in deploy"-->
+													<!--ng-change="second='';third='';">-->
+												<!--&lt;!&ndash;<option value="">省</option>-->
+                                                <!--&lt;!&ndash;<option value="">请选择</option>&ndash;&gt;-->
+											<!--</select>-->
+										<!--</div>-->
+										<!--<div >-->
+											<!--<select  ng-show="first.children.length" class="form-control" ng-model="second" ng-options="b.label for b in first.children"-->
+													 <!--ng-change="third='';">-->
+												<!--<option value="">请选择或者取消选择</option>-->
+											<!--</select>-->
+										<!--</div>-->
+										<!--<div >-->
+											<!--<select ng-show="second.children.length" class="form-control" ng-model="third" ng-options="c.label for c in second.children">-->
+												<!--<option value="">请选择或者取消选择</option>-->
+											<!--</select>-->
+										<!--</div>-->
+										<!--<div >-->
+											<!--<select ng-show="third.children.length" class="form-control" ng-model="fouth" ng-options="c.label for c in third.children">-->
+												<!--<option value="">请选择或者取消选择</option>-->
+											<!--</select>-->
+										<!--</div>-->
+									<!--</div>-->
+								<!--</div>-->
+								<!--<div class=" form-group">-->
+									<!--<label class="col-md-3 control-label">选择单位</label>-->
+									<!--<label class="col-md-9">-->
+										<!--{{first.label}}-{{second.label}}-{{third.label}}-{{fouth.label}}-->
+									<!--</label>-->
+								<!--</div>-->
+								<!--<div class="form-group">-->
+									<!--<button  ng-click="status.leftopen = !status.leftopen"  type="submit" class="btn w-full btn-info ">确定 </button>-->
+								<!--</div>-->
+							<!--</form>-->
+						<!--</div>-->
+					<!--</accordion-group>-->
+				<!--</accordion>-->
+			<!--</div>-->
+
+			<div>
+				<div class="panel panel-default">
+					<div class="panel-heading">{{treeselected}}
+						<!--<a  class="pull-right m-l"> <i class="fa fa-times"></i></a>-->
+						<!--<a  class="pull-right m-l"> <i class="fa fa-refresh"></i></a>-->
+					</div>
+					<div class="form-group" >
+						<!--<button ng-class="{fixtop:isfix}" class="btn w-full  btn-danger font-bold" ng-click="savedeploy()">保存班子调整</button>-->
+						<button style="position: fixed;bottom: 0px;z-index: 1000" class="btn w-full  btn-danger font-bold" ng-click="savedeploy()">保存班子调整</button>
+					</div>
+					<div >
+						<div ng-repeat="t in daweilist" class="row">
+							<div >
+								<div class="panel panel-card col-sm-4" ng-repeat="peoples in t.people">
+									<div class="item">
+										<img ng-click="showOneDetail(peoples.id)" src="{{peoples.img}}" class="w-full r-t" alt="Washed Out">
+									</div>
+									<div class="list-group">
+										<div class="list-group-item">{{peoples.name}}</div>
+										<div class="list-group-item">{{t.jibiename}}</div>
+										<div class="list-group-item">
+											<button class="btn btn-info  w-full"  ng-click="removepeople(t.level,peoples)">免职</button>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="col-md-8 col-padding" ng-style="{height:showheight}" style="overflow-y: auto" >
+			<accordion close-others="oneAtATime">
+				<accordion-group is-open="status.open" class="b-info">
+					<accordion-heading class="btn-info">
+						设置查询条件 <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': status.open, 'fa-angle-right': !status.open}"></i>
+					</accordion-heading>
+					<!--<form>-->
+					<!--<div class="form-group">-->
+					<div class="vbox">
+						<div class="" >
+							<div class="cell scrollable hover">
+								<div class="cell-inner">
+									<div class="padder">
+										<div class="list-group">
+											<form name="searchform" class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-date-disabled" ng-submit="search()">
+												<div class="">
+													<div class="list-group-item">
+														<div class="form-group" style="margin-bottom: 0px">
+															<div class="input-group">
+																<span class="input-group-addon">按关键字查询：</span>
+																<input type="text" class="form-control">
+																 <span class="input-group-btn">
+																	  <button class="btn btn-info"  ng-click="status.open = !status.open"  type="submit">
+																		  搜索
+																	  </button>
+																   </span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group" style="margin-bottom: 0px" ng-repeat="searchitem in searchlist | filter:{show:'less'}">
+													<label class="control-label">{{searchitem.title}}</label>
+													<input type="button" class="btn btn-default left-button " ng-repeat="selectitem in searchitem.selectitem" ng-init="isSelected = false" ng-click="isSelected = !isSelected"  selectbutton="isSelected" value="{{selectitem.name}}" selectparam='{{selectitem.id}}'>
+												</div>
+												<div class="form-group">
+													<button type="submit"  ng-click="status.open = !status.open" class="btn w-full  btn-info font-bold">搜索</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--</div>-->
+					<!--</form>-->
+				</accordion-group>
+			</accordion>
+			<div class="panel panel-default">
+				<div class="panel-heading">搜索结果</div>
+				<div class="panel-body row">
+					<div class="row" >
+						<div ng-repeat="t in imgs">
+							<div class="col-sm-2">
+								<div class="panel panel-card">
+									<div class="item">
+										<img ng-click="showOneDetail(t.id)" src="{{t.img}}" class="w-full r-t" alt="Washed Out">
+									</div>
+									<div class="">
+										<div class="list-group-item">{{t.name}}</div>
+										<div class="list-group-item">{{t.company}}</div>
+										<div class="list-group-item">
+											<button class="btn btn-info  w-full"  ng-click="selectpeople(t)">任职</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

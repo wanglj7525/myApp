@@ -1,0 +1,310 @@
+{
+    "info": [
+        {
+            "id": 1,
+            "title": "方案一 调整说明",
+            "reason": "根据XXX文件要求，领导班子应配X名女干部，XX单位未按要求配备；",
+            "planlist": [
+                {
+                    "id": 1,
+                    "name": "张三1",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三4",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "方案2 调整说明",
+            "reason": "根据XXX文件要求，领导班子应配X名女干部，XX单位未按要求配备；",
+            "planlist": [
+                {
+                    "id": 1,
+                    "name": "张三1",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三4",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "方案3 调整说明",
+            "reason": "根据XXX文件要求，领导班子应配X名女干部，XX单位未按要求配备；",
+            "planlist": [
+                {
+                    "id": 1,
+                    "name": "张三1",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三4",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "方案4 调整说明",
+            "reason": "根据XXX文件要求，领导班子应配X名女干部，XX单位未按要求配备；",
+            "planlist": [
+                {
+                    "id": 1,
+                    "name": "张三1",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三4",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "方案5 调整说明",
+            "reason": "根据XXX文件要求，领导班子应配X名女干部，XX单位未按要求配备；",
+            "planlist": [
+                {
+                    "id": 1,
+                    "name": "张三1",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三4",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "方案6 调整说明",
+            "reason": "根据XXX文件要求，领导班子应配X名女干部，XX单位未按要求配备；",
+            "planlist": [
+                {
+                    "id": 1,
+                    "name": "张三1",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三2",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三3",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                },
+                {
+                    "id": 1,
+                    "name": "张三4",
+                    "sex": "男",
+                    "birthday": "196511",
+                    "company": "福清市xxx",
+                    "newcompany": "xxx"
+                }
+            ]
+        }
+    ]
+}

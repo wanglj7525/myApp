@@ -1,0 +1,18 @@
+<div class="cmd-navbar navbar blue md-whiteframe-z1" data-ng-include=" '/public/app/tpl/blocks/material.header.html' " >
+</div>
+<div flex layout="column" class="bg-light md-whiteframe-z0  md-content" id="header" >
+	<div class="bg-light md-whiteframe-z0 md-aside md-content hidden-xs affix" ng-show="isshowtree" >
+		<nav ui-nav  ng-include="'/public/app/tpl/blocks/nosearch.nav.html'"></nav>
+		<!--<nav ui-nav  ng-include="'/public/app/tpl/blocks/material.nav.html'"></nav>-->
+	</div>
+	<!--<div flex class="bg-light md-whiteframe-z0 md-aside md-content hidden-xs affix" data-ng-include=" '/public/app/tpl/blocks/material.aside.html' ">-->
+	<!--</div>-->
+	<!-- view -->
+	<!--<div class="bg-light md-whiteframe-z0  md-content" layout="column">-->
+	<!-- <div ui-butterbar></div>
+  <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".md-aside" ></a> -->
+	<div class="md-content fade-in bg-light"  ui-view  ></div>
+	<!--ng-style="{height:showheight}"-->
+	<!--</div>-->
+	<!-- / view -->
+</div>

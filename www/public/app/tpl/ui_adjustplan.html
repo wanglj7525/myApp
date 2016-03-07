@@ -1,0 +1,82 @@
+
+<div class="col-padding row hbox hbox-auto-xs hbox-auto-sm" ng-controller="planController">
+	<!-- column -->
+	<!--  <div class="col w-lg lt b-r">
+
+
+         <div flex class=" md-whiteframe-z0 md-aside md-content hidden-xs scrollable m-l" data-ng-include=" '/public/app/tpl/blocks/material.aside.html' ">
+             </div>
+
+     </div> -->
+	<div class="leftNav col-md-2 col-padding bg-light dk b-r bg-auto" style="overflow-y: auto"><!--  style="position:fixed"  -->
+		<!--  <div class="wrapper b-b bg"> -->
+		<!-- <a ng-click="$root.$state.go('app.worktip.edit',{},{reload:true})" class="btn btn-sm btn-danger w-xs font-bold">管理标签</a> -->
+		<!-- <a ui-sref="app.worktip.edit" class="btn btn-sm btn-danger w-xs font-bold">管理标签</a> -->
+		<!--  </div> -->
+		<div class="" >
+			<ul class="nav nav-pills nav-stacked ">
+				<li ui-sref-active="active">
+					<a ng-click="clickleft()" ui-sref="app.adjustplan.detail({id:item.id})">
+						全部
+					</a>
+				</li>
+				<li ng-repeat="item in planlist" ui-sref-active="active" >
+					<a  ui-sref="app.adjustplan.detail({id:item.id})">
+						{{item.name}}
+					</a>
+				</li>
+				<!--<li ui-sref-active="active">-->
+					<!--<a ng-click="clickleft()" ui-sref="app.adjustplan.detail({id:item.id})">-->
+						<!--{{planlist[0].name}}-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li ng-repeat="item in planlist" ui-sref-active="active">-->
+					<!--<a ng-show="item!=planlist[0]" ui-sref="app.adjustplan.detail({id:item.id})">-->
+						<!--{{item.name}}-->
+					<!--</a>-->
+				<!--</li>-->
+			</ul>
+		</div>
+	</div>
+	<div class="workBgColor col-padding col-md-10"  ng-style="{height:showheight}" style="overflow-y: auto">
+		<div ui-view ></div>
+	</div>
+</div>
+
+<!--<div ng-controller="planCtrl">-->
+	<!--&lt;!&ndash;<div class="bg-light lter b-b wrapper-md">&ndash;&gt;-->
+		<!--&lt;!&ndash;<h1 class="m-n font-thin h3">&ndash;&gt;-->
+			<!--&lt;!&ndash;调整方案&ndash;&gt;-->
+		<!--&lt;!&ndash;</h1>&ndash;&gt;-->
+	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+	<!--<div class="">-->
+		<!--<div class="panel panel-default" ng-repeat="row in plan">-->
+		    <!--<div class="panel-heading">{{row.title}}</div>  -->
+			<!--<div class="panel-body">-->
+				<!--<div class="list-group">-->
+					<!--<div class="list-group-item">-->
+						<!--<div class="list-group-item-heading">-->
+							<!--一. 调整原因-->
+						<!--</div>-->
+						<!--<div class="list-group-item-text">-->
+							<!--{{row.reason}}-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="list-group-item">-->
+						<!--<div class="list-group-item-heading">-->
+							<!--二. 调整方案-->
+						<!--</div>-->
+						<!--<div class="list-group-item-text">-->
+							<!--<ul class="list-group">-->
+								<!--<li class="list-group-item" ng-repeat="one in row.planlist">{{one.name}},{{one.sex}},{{one.birthday}},現任{{one.company}},拟免{{one.company}}，拟任{{one.newcompany}}</li>-->
+							<!--</ul>-->
+						<!--</div>-->
+						<!---->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>	-->
+		<!--</div>-->
+		<!---->
+		<!--</div>-->
+	<!--</div>-->
+<!--</div>-->

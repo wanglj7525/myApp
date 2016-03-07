@@ -1,0 +1,82 @@
+<div col-padding ng-controller="analysisController">
+    <script type="text/ng-template" id="analysisChartsModel.html">
+        <div ng-include="'/public/app/tpl/ui_charts_modal.html'"></div>
+    </script>
+    <!--<div class="bg-light md-whiteframe-z0 md-aside md-content hidden-xs affix">-->
+        <!--<nav ui-nav  ng-include="'/public/app/tpl/blocks/nosearch.nav.html'" ></nav>-->
+    <!--</div>-->
+    <div class="md-right">
+        <div class="workBgColor row" >
+            <div class="col-md-8 col-padding">
+                <div class="analysis col-md-6 col-padding">
+                    <div class="analysis panel panel-default ">
+                        <div class="panel-heading font-bold">年龄</div>
+                        <div class="panel-body" >
+                            <div>
+                                <!--<pies id="pies" config="config1"></pies>-->
+                                <bars id="bars1" config="config1"></bars>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analysis col-md-6 col-padding">
+
+                    <div class="analysis panel panel-default ">
+                        <div class="panel-heading font-bold">性别</div>
+                        <div class="panel-body">
+                            <div>
+                                <pies id="pies2" config="config2" ></pies>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analysis col-md-6 col-padding">
+                    <div class="analysis panel panel-default ">
+                        <div class="panel-heading font-bold">学历</div>
+                        <div class="panel-body">
+                            <div>
+                                <bars id="bars3" config="config3" ></bars>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analysis col-md-6 col-padding">
+                    <div class="analysis panel panel-default ">
+                        <div class="panel-heading font-bold">党派</div>
+                        <div class="panel-body">
+                            <div>
+                                <bars id="bars4" config="config4" ></bars>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-padding">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold" style="position: relative">需要调整的问题
+                        <button ui-sref="app.deploy" class="btn btn-add btn-href ">班子调整</button>
+                    </div>
+                    <div class="panel-body" style="padding: 0px">
+                        <div class=" list-group"  style="display:inline;">
+                            <div class="list-group-item">
+                                <span>年龄比例不协调，需要进行班子调整</span>
+
+                            </div>
+                            <div class="list-group-item">
+                                <span>年龄比例不协调，需要进行班子调整</span>
+                            </div>
+                            <div class="list-group-item">性别比例不协调，需要进行班子调整
+                            </div>
+                            <div class="list-group-item">学历比例不协调，需要进行班子调整
+                            </div>
+                            <div class="list-group-item">党派比例不协调，需要进行班子调整
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
